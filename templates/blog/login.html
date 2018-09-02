@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<small>
+			<a href="{% url 'password_reset' %}">Forgetton Your Password</a>
+		</small>
+		<input type="submit" value="Login" class="btn btn-outline-success">
+	</form>
+{% endblock %} 
